@@ -23,7 +23,7 @@ export const FAQS: FAQItem[] = [
     id: 'faq-4',
     category: 'Quotes & Pricing',
     question: 'How quickly does Yasodh Ltd respond to quotation requests?',
-    answer: 'Our commercial sales desk aims to review and provide formal written quotations within 2 to 4 business hours during standard UK operating hours (Monday to Friday, 08:30 – 17:30 GMT). Urgent fleet requirements can be expedited by contacting our sales desk directly by phone at +44 7407 642396.',
+    answer: 'Our commercial sales desk aims to review and provide formal written quotations within 2 to 4 business hours during standard UK operating hours (Monday to Friday, 09:00 – 18:00 GMT and Saturday to Sunday, 10:00 – 16:00 GMT). Urgent fleet requirements can be expedited by contacting our sales desk directly by phone at +44 7407 642396.',
   },
   {
     id: 'faq-5',

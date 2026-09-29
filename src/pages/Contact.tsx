@@ -118,7 +118,7 @@ export const Contact: React.FC = () => {
                       </a>
                     </div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-                      Mon – Fri: 08:30 – 17:30 GMT
+                      Mon – Fri: 09:00 – 18:00 | Sat – Sun: 10:00 – 16:00 GMT
                     </div>
                   </div>
                 </div>

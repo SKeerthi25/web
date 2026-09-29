@@ -577,7 +577,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenQuoteModal }) => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <CheckCircle2 size={18} color="var(--accent-sky)" />
                   <span style={{ fontSize: '0.9375rem', color: 'var(--text-primary)' }}>
-                    Standard UK Business Hours: Mon – Fri 08:30 – 17:30 GMT
+                    Standard UK Business Hours: Mon – Fri 09:00 – 18:00 | Sat – Sun 10:00 – 16:00 GMT
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>

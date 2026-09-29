@@ -111,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCookieSettings }) => {
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <span>Officer Status: <strong style={{ color: '#10B981' }}>Active (Verified)</strong></span>
-            <span>Operating Hours: <strong>Mon – Fri 08:30 – 17:30 GMT</strong></span>
+            <span>Operating Hours: <strong>Mon – Fri 09:00 – 18:00 | Sat – Sun 10:00 – 16:00 GMT</strong></span>
           </div>
         </div>
 

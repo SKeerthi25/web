@@ -361,11 +361,11 @@ export const About: React.FC = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-subtle)' }}>
                   <span>Monday – Friday:</span>
-                  <span style={{ color: 'var(--text-white)', fontWeight: 600 }}>08:30 – 17:30 GMT</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600 }}>09:00 – 18:00 GMT</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-subtle)' }}>
                   <span>Saturday – Sunday:</span>
-                  <span style={{ color: 'var(--text-muted)' }}>Closed (Trade Desk)</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600 }}>10:00 – 16:00 GMT</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Online Quote Portal:</span>

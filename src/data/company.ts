@@ -49,8 +49,9 @@ export const COMPANY_INFO = {
   },
   
   openingHours: {
-    weekday: 'Monday – Friday: 08:30 – 17:30 GMT',
-    weekend: 'Saturday – Sunday: Closed (Wholesale Enquiries Accepted 24/7 Online)',
+    weekday: 'Monday – Friday: 09:00 – 18:00 GMT',
+    weekend: 'Saturday – Sunday: 10:00 – 16:00 GMT',
+    display: 'Mon – Fri: 09:00 – 18:00 | Sat – Sun: 10:00 – 16:00 GMT',
   },
 
   trustPillars: [
