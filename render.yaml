@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: yasodh-technology-website
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      # SPA rewrite rule so React Router routes (/about, /products, etc.) work on page refresh
+      - type: rewrite
+        source: /*
+        destination: /index.html
