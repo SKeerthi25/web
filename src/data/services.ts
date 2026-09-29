@@ -1,0 +1,100 @@
+import { ServiceItem } from '../types';
+
+export const SERVICES: ServiceItem[] = [
+  {
+    id: 'wholesale-hardware-supply',
+    title: 'Business IT Equipment Wholesale Supply',
+    slug: 'wholesale-hardware-supply',
+    category: 'Core Supply',
+    summary: 'Direct volume wholesale supply of commercial laptops, desktop workstations, monitors, and server components for UK businesses.',
+    description: 'Our primary business operation under UK SIC 46510. We supply verified, brand-new technology hardware in bulk consignments to commercial enterprises, educational bodies, and IT trade resellers across the United Kingdom.',
+    deliverables: [
+      'Volume tier pricing on bulk hardware batches',
+      'Original manufacturer packaging and sealed units',
+      'Full VAT commercial invoices with UK company number 17485685',
+      'Tracked courier and palletised freight distribution from Swindon',
+    ],
+    process: [
+      { step: 1, title: 'Requirements Review', desc: 'Submit your hardware bill of materials (BOM) or specifications via our quotation portal.' },
+      { step: 2, title: 'Formal Wholesale Quotation', desc: 'Receive an itemised quote with quantity discounts, lead times, and terms.' },
+      { step: 3, title: 'Order Verification & Dispatch', desc: 'Upon purchase order confirmation, goods are packed and dispatched with secure tracking.' },
+      { step: 4, title: 'Post-Delivery Support', desc: 'Invoicing documentation, serial number records, and warranty references delivered promptly.' },
+    ],
+  },
+  {
+    id: 'computer-peripheral-supply',
+    title: 'Computer & Peripheral Equipment Supply',
+    slug: 'computer-peripheral-supply',
+    category: 'Core Supply',
+    summary: 'Master-carton and batch procurement of high-durability keyboards, mice, docking stations, display cables, and headsets.',
+    description: 'Ensure every desk in your organisation is equipped with ergonomic, reliable peripherals. We supply large volumes of commercial-grade input devices, universal docking stations, and audio equipment suited for open-plan and hybrid work environments.',
+    deliverables: [
+      'Master carton packaging for cost-effective freight handling',
+      'Standardised UK keyboard layouts and power cords',
+      'Universal compatibility across major operating platforms',
+      'Consistent peripheral models for uniform desk aesthetics',
+    ],
+    process: [
+      { step: 1, title: 'Desk Audit', desc: 'Specify peripheral counts needed per workstation or desk type.' },
+      { step: 2, title: 'Sample & Quotation', desc: 'We verify specifications and provide wholesale carton-level pricing.' },
+      { step: 3, title: 'Consolidated Shipment', desc: 'Delivered in bulk crates directly to your primary IT staging location.' },
+    ],
+  },
+  {
+    id: 'software-procurement',
+    title: 'Software & Volume Digital Licensing Supply',
+    slug: 'software-procurement',
+    category: 'Software',
+    summary: 'Authentic commercial software licenses, operating system keys, and business productivity allocations.',
+    description: 'Yasodh Ltd supplies legal, fully-auditable commercial software licenses to complement your hardware purchases. We facilitate electronic software delivery (ESD) and volume key assignments for UK organisations.',
+    deliverables: [
+      'Official digital entitlement certificates and product keys',
+      'Documented proof of purchase for software compliance audits',
+      'Compatibility consultation for legacy and modern system upgrades',
+      'Electronic delivery within agreed service timeframes',
+    ],
+    process: [
+      { step: 1, title: 'Licensing Audit', desc: 'Determine total seat requirements and target software editions.' },
+      { step: 2, title: 'Volume Quote', desc: 'Receive tiered pricing tailored to commercial, education, or public sector.' },
+      { step: 3, title: 'Entitlement Issuance', desc: 'Digital delivery of license certificates, keys, and setup guidelines.' },
+    ],
+  },
+  {
+    id: 'custom-hardware-sourcing',
+    title: 'Bespoke Device & Hardware Sourcing',
+    slug: 'custom-hardware-sourcing',
+    category: 'Procurement',
+    summary: 'Specialist sourcing service for hard-to-find components, discontinued spare units, or specialised enterprise configurations.',
+    description: 'Need specific legacy components to maintain an existing infrastructure or high-spec custom configurations? Our procurement team leverages verified UK and European supply channels to locate and supply exact hardware specifications.',
+    deliverables: [
+      'Market availability checks across authorized wholesale distribution chains',
+      'Verification of part numbers and hardware revisions',
+      'Escrow or confirmed terms for specialised procurement batches',
+      'Physical inspection before final forwarding to client',
+    ],
+    process: [
+      { step: 1, title: 'Part Number Specification', desc: 'Submit exact manufacturer part numbers (MPN) and quantities.' },
+      { step: 2, title: 'Channel Sourcing', desc: 'We survey wholesale channels to secure available stock allocations.' },
+      { step: 3, title: 'Quality Verification & Delivery', desc: 'Parts are verified and dispatched under standard delivery terms.' },
+    ],
+  },
+  {
+    id: 'b2b-technology-consultation',
+    title: 'B2B Technology Consultation (Advisory)',
+    slug: 'b2b-technology-consultation',
+    category: 'Consultation',
+    summary: 'Objective hardware specifications guidance to help UK businesses select cost-effective and future-proof IT equipment.',
+    description: 'Before committing capital to fleet upgrades, consult with our technology specialists. We help you review hardware compatibility, docking requirements, and monitor resolutions to ensure maximum return on investment.',
+    deliverables: [
+      'Hardware requirement matching based on user workload tiers',
+      'Total cost of ownership (TCO) comparisons across hardware generations',
+      'Docking and cable compatibility matrix for hybrid offices',
+      'Standardized procurement specification sheets for internal sign-off',
+    ],
+    process: [
+      { step: 1, title: 'Discovery Discussion', desc: 'Review your current operational challenges and upcoming hardware refresh.' },
+      { step: 2, title: 'Specification Proposal', desc: 'We deliver an actionable, brand-agnostic hardware recommendation.' },
+      { step: 3, title: 'Procurement Execution', desc: 'Transition seamlessly into wholesale supply when ready to order.' },
+    ],
+  },
+];
