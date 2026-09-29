@@ -61,4 +61,10 @@ export const FAQS: FAQItem[] = [
     question: 'What payment terms are available for business clients?',
     answer: 'Standard wholesale transactions are processed via bank wire transfer (BACS / CHAPS). Established corporate accounts and public sector entities can apply for credit terms subject to standard credit vetting and trade references.',
   },
+  {
+    id: 'faq-11',
+    category: 'Wholesale & Orders',
+    question: 'Who is the registered Director of Yasodh Ltd, and is statutory registration verified?',
+    answer: 'Yasodh Ltd is incorporated in England and Wales under UK Company Number 17485685. The active registered Director is Yasodharan Chinnasamy (official listing: CHINNASAMY, Yasodharan, appointed 28 September 2026), with identity verification requirements complete on the public Companies House register.',
+  },
 ];

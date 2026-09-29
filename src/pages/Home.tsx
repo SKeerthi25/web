@@ -609,6 +609,16 @@ export const Home: React.FC<HomeProps> = ({ onOpenQuoteModal }) => {
                   <span style={{ color: 'var(--accent-sky)', fontWeight: 700 }}>{COMPANY_INFO.companyNumber}</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-subtle)' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Company Director:</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600 }}>{COMPANY_INFO.director.fullName}</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-subtle)' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Officer Verification:</span>
+                  <span style={{ color: '#10B981', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    <CheckCircle2 size={14} /> Requirements Complete
+                  </span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-subtle)' }}>
                   <span style={{ color: 'var(--text-muted)' }}>Business Nature:</span>
                   <span style={{ color: 'var(--text-white)', fontWeight: 500, textAlign: 'right', maxWidth: '60%' }}>SIC 46510 Wholesale</span>
                 </div>

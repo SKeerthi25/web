@@ -100,6 +100,11 @@ export const About: React.FC = () => {
                 </div>
 
                 <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase' }}>Company Director</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.fullName}</span>
+                </div>
+
+                <div>
                   <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase' }}>Trading &amp; Registered Address</span>
                   <span style={{ color: 'var(--text-white)', fontWeight: 500 }}>
                     {COMPANY_INFO.address.fullFormatted}
@@ -114,6 +119,87 @@ export const About: React.FC = () => {
                 <div>
                   <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase' }}>Corporate Domain Email (Planned)</span>
                   <span style={{ color: 'var(--accent-sky)', fontWeight: 500 }}>{COMPANY_INFO.email.planned}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Officers & Verified Governance (Companies House UK Record) */}
+      <section className="section" style={{ background: '#090F1E', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
+        <div className="container">
+          <div className="section-header">
+            <div className="section-badge">Companies House Verified Officer</div>
+            <h2 className="section-title">Corporate Leadership &amp; Officers</h2>
+            <p className="section-subtitle">
+              Public statutory leadership registered and verified with Companies House, the Executive Agency of the UK Government.
+            </p>
+          </div>
+
+          <div style={{ maxWidth: '820px', margin: '0 auto' }}>
+            <div className="officer-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.25rem' }}>
+                    <h3 style={{ fontSize: '1.45rem', margin: 0, color: 'var(--text-white)' }}>
+                      {COMPANY_INFO.director.fullName}
+                    </h3>
+                    <span className="officer-badge-active">
+                      ● Active
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    Companies House Listing: <strong style={{ color: 'var(--accent-sky)' }}>{COMPANY_INFO.director.officialListing}</strong>
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '0.5rem 0.85rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Statutory Count</div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-white)', fontWeight: 600 }}>{COMPANY_INFO.director.officerCount}</div>
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.35rem', marginBottom: '1.5rem' }}>
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Role</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.role}</span>
+                </div>
+
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Appointed On</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.appointedOn}</span>
+                </div>
+
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Date of Birth</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.dateOfBirth}</span>
+                </div>
+
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Nationality</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.nationality}</span>
+                </div>
+
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Country of Residence</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 600, fontSize: '0.95rem' }}>{COMPANY_INFO.director.residence}</span>
+                </div>
+
+                <div>
+                  <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Correspondence Address</span>
+                  <span style={{ color: 'var(--text-white)', fontWeight: 500, fontSize: '0.875rem', lineHeight: 1.4, display: 'block' }}>
+                    {COMPANY_INFO.director.correspondenceAddress}
+                  </span>
+                </div>
+              </div>
+
+              {/* Identity verification status box */}
+              <div className="officer-verified-box">
+                <CheckCircle2 size={20} color="#10B981" />
+                <div style={{ fontSize: '0.875rem' }}>
+                  <strong style={{ color: '#10B981' }}>Identity Verification Status: </strong>
+                  <span style={{ color: 'var(--text-white)' }}>{COMPANY_INFO.director.identityVerification}</span>
                 </div>
               </div>
             </div>

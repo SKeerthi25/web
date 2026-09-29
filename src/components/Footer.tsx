@@ -107,11 +107,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCookieSettings }) => {
         <div style={{ padding: '1.25rem 1.5rem', background: 'rgba(15, 23, 42, 0.6)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-sm)', marginBottom: '2.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', fontSize: '0.8125rem', color: 'var(--text-secondary)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
             <Shield size={16} color="var(--accent-sky)" />
-            <span>Factual UK Registration Verified: Companies House Registered Entity No. <strong>{COMPANY_INFO.companyNumber}</strong></span>
+            <span>Companies House UK No. <strong>{COMPANY_INFO.companyNumber}</strong> • Director: <strong>{COMPANY_INFO.director.fullName}</strong></span>
           </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Operating Hours: <strong>Mon – Fri: 08:30 – 17:30 GMT</strong></span>
-            <span>Nationwide UK Delivery</span>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <span>Officer Status: <strong style={{ color: '#10B981' }}>Active (Verified)</strong></span>
+            <span>Operating Hours: <strong>Mon – Fri 08:30 – 17:30 GMT</strong></span>
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Preloader } from './components/Preloader';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { CookieConsent } from './components/CookieConsent';
@@ -46,6 +47,9 @@ export const App: React.FC = () => {
 
   return (
     <Router>
+      {/* 2-Second Website Intro Preloader */}
+      <Preloader />
+
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {/* Sticky Header with Mega-Menu & Quote CTA */}
         <Header onOpenQuoteModal={handleOpenQuoteModal} />

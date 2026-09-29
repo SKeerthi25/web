@@ -7,6 +7,21 @@ export const COMPANY_INFO = {
   sicDescription: 'Wholesale of computers, computer peripheral equipment and software',
   incorporationCountry: 'United Kingdom',
   
+  // Official Officer / Director Details (Companies House UK Verified)
+  director: {
+    fullName: 'Yasodharan Chinnasamy',
+    officialListing: 'CHINNASAMY, Yasodharan',
+    role: 'Director',
+    status: 'ACTIVE',
+    dateOfBirth: 'July 1985',
+    appointedOn: '28 September 2026',
+    nationality: 'Indian',
+    residence: 'England',
+    correspondenceAddress: '1 Bessemer Road West, Swindon, England, SN2 1ND',
+    identityVerification: 'Verification requirements complete',
+    officerCount: '1 officer / 0 resignations',
+  },
+  
   // Official NAP (Name, Address, Phone)
   address: {
     line1: '1 Bessemer Rd West',
