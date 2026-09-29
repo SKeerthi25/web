@@ -18,7 +18,10 @@ import {
   Briefcase,
   Layers,
   Building2,
-  GraduationCap
+  GraduationCap,
+  HelpCircle,
+  Home as HomeIcon,
+  ChevronRight
 } from 'lucide-react';
 import { Logo } from './Logo';
 import { COMPANY_INFO } from '../data/company';
@@ -41,6 +44,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   // Close mobile drawer on route change
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -48,7 +63,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   }, [location.pathname]);
 
   return (
-    <header className={`header-sticky ${isScrolled ? 'header-scrolled' : ''}`}>
+    <>
+      <header className={`header-sticky ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="container" style={{ height: '100%' }}>
         <div className="header-inner">
           {/* Logo */}
@@ -307,123 +323,172 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
       </div>
+    </header>
 
-
-
-      {/* Mobile Drawer */}
+    {/* Mobile Navigation Drawer (Rendered outside <header> to prevent backdrop-filter containment) */}
+    <div 
+      className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
+      onClick={() => setMobileMenuOpen(false)}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation Menu"
+    >
       <div 
-        className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
-        onClick={() => setMobileMenuOpen(false)}
+        className="mobile-drawer-content"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div 
-          className="mobile-drawer-content"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border-subtle)' }}>
-            <Logo showSubtitle={false} />
-            <button 
-              type="button" 
-              className="btn btn-secondary btn-sm" 
-              onClick={() => setMobileMenuOpen(false)}
-              aria-label="Close menu"
-              style={{ padding: '0.45rem', minWidth: '38px', minHeight: '38px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <X size={18} />
-            </button>
-          </div>
+        {/* Drawer Header */}
+        <div className="mobile-drawer-header">
+          <Logo showSubtitle={false} />
+          <button 
+            type="button" 
+            className="mobile-drawer-close" 
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close navigation menu"
+          >
+            <X size={20} />
+          </button>
+        </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', marginBottom: '1.5rem' }}>
-            <Link 
-              to="/" 
-              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/about" 
-              className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              About Yasodh
-            </Link>
-            <Link 
-              to="/products" 
-              className={`nav-link ${location.pathname.startsWith('/products') ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Products Catalogue
-            </Link>
-            <Link 
-              to="/solutions" 
-              className={`nav-link ${location.pathname.startsWith('/solutions') ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Business Solutions
-            </Link>
-            <Link 
-              to="/services" 
-              className={`nav-link ${location.pathname.startsWith('/services') ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Services &amp; Supply
-            </Link>
-            <Link 
-              to="/industries" 
-              className={`nav-link ${location.pathname === '/industries' ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Industries Served
-            </Link>
-            <Link 
-              to="/resources" 
-              className={`nav-link ${location.pathname.startsWith('/resources') ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Knowledge &amp; Guides
-            </Link>
-            <Link 
-              to="/faq" 
-              className={`nav-link ${location.pathname === '/faq' ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              B2B FAQs
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} 
-              style={{ fontSize: '1rem', minHeight: '44px', display: 'flex', alignItems: 'center', padding: '0.6rem 0.85rem', borderRadius: '6px' }}
-            >
-              Contact Us
-            </Link>
-          </div>
-
-          <div style={{ marginTop: 'auto', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            <button 
-              type="button"
-              className="btn btn-primary btn-full"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (onOpenQuoteModal) onOpenQuoteModal();
-                else window.location.href = '/quote';
-              }}
-            >
-              <FileText size={16} /> Request Formal Quote
-            </button>
-
-            <a 
-              href={`tel:${COMPANY_INFO.phone.international}`}
-              className="btn btn-secondary btn-full"
-            >
-              <Phone size={15} color="var(--accent-sky)" /> Call {COMPANY_INFO.phone.display}
-            </a>
-
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '0.5rem' }}>
-              Company No: {COMPANY_INFO.companyNumber} • SIC 46510
+        {/* Drawer Nav Links */}
+        <nav className="mobile-nav-list">
+          <Link 
+            to="/" 
+            className={`mobile-nav-item ${location.pathname === '/' ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><HomeIcon size={18} /></span>
+              <span>Home</span>
             </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/about" 
+            className={`mobile-nav-item ${location.pathname === '/about' ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><Building2 size={18} /></span>
+              <span>About Yasodh</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/products" 
+            className={`mobile-nav-item ${location.pathname.startsWith('/products') ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><Laptop size={18} /></span>
+              <span>Products Catalogue</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/solutions" 
+            className={`mobile-nav-item ${location.pathname.startsWith('/solutions') ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><Layers size={18} /></span>
+              <span>Business Solutions</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/services" 
+            className={`mobile-nav-item ${location.pathname.startsWith('/services') ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><Briefcase size={18} /></span>
+              <span>Services &amp; Supply</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/industries" 
+            className={`mobile-nav-item ${location.pathname === '/industries' ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><GraduationCap size={18} /></span>
+              <span>Industries Served</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/resources" 
+            className={`mobile-nav-item ${location.pathname.startsWith('/resources') ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><FileText size={18} /></span>
+              <span>Knowledge &amp; Guides</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/faq" 
+            className={`mobile-nav-item ${location.pathname === '/faq' ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><HelpCircle size={18} /></span>
+              <span>B2B FAQs</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+
+          <Link 
+            to="/contact" 
+            className={`mobile-nav-item ${location.pathname === '/contact' ? 'active' : ''}`}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div className="mobile-nav-item-left">
+              <span className="mobile-nav-icon"><Mail size={18} /></span>
+              <span>Contact Us</span>
+            </div>
+            <ChevronRight size={16} className="mobile-nav-arrow" />
+          </Link>
+        </nav>
+
+        {/* Drawer Action CTAs */}
+        <div className="mobile-drawer-footer">
+          <button 
+            type="button"
+            className="btn btn-primary btn-full"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              if (onOpenQuoteModal) onOpenQuoteModal();
+              else window.location.href = '/quote';
+            }}
+          >
+            <FileText size={16} /> Request Formal Quote
+          </button>
+
+          <a 
+            href={`tel:${COMPANY_INFO.phone.international}`}
+            className="btn btn-secondary btn-full"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Phone size={15} color="var(--accent-sky)" /> Call {COMPANY_INFO.phone.display}
+          </a>
+
+          <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '0.25rem' }}>
+            Company No: {COMPANY_INFO.companyNumber} • SIC 46510
           </div>
         </div>
       </div>
-    </header>
-  );
+    </div>
+  </>
+);
 };
