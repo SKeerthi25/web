@@ -322,6 +322,109 @@ export const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Physical Hardware Inventory & Operations Gallery */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-badge">Verified Inventory</div>
+            <h2 className="section-title">Hardware Consignments &amp; Supply Scope</h2>
+            <p className="section-subtitle">
+              Authentic commercial computing systems, peripheral equipment, and hardware components supplied under UK SIC 46510.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.75rem' }}>
+            {/* Card 1: Bulk Laptops */}
+            <div className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ height: '220px', overflow: 'hidden', background: '#0F172A', position: 'relative' }}>
+                <img 
+                  src="/images/wholesale-laptops-stack.png" 
+                  alt="Bulk wholesale commercial laptops in stock for UK enterprise supply" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                />
+                <span className="badge badge-stock" style={{ position: 'absolute', top: '12px', left: '12px' }}>
+                  Bulk Batches
+                </span>
+              </div>
+              <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--text-white)', marginBottom: '0.5rem' }}>
+                  Bulk Fleet Laptops
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                  Volume batches of business-grade laptops pre-configured for corporate rollouts, remote workforces, and educational suites.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Workplace Workstation Displays */}
+            <div className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ height: '220px', overflow: 'hidden', background: '#0F172A', position: 'relative' }}>
+                <img 
+                  src="/images/workstation-monitors-office.png" 
+                  alt="Modern office desktop workstation displays and computing setups" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                />
+                <span className="badge badge-stock" style={{ position: 'absolute', top: '12px', left: '12px' }}>
+                  Workplace Computing
+                </span>
+              </div>
+              <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--text-white)', marginBottom: '0.5rem' }}>
+                  Workstation Displays &amp; Desks
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                  Commercial IPS displays and multi-monitor setups tailored for continuous office productivity, call centres, and financial desks.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: SFF Desktops & Towers */}
+            <div className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ height: '220px', overflow: 'hidden', background: '#0F172A', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img 
+                  src="/images/sff-desktop-business.png" 
+                  alt="HP Small Form Factor commercial business desktop tower" 
+                  style={{ maxHeight: '90%', maxWidth: '90%', objectFit: 'contain' }} 
+                />
+                <span className="badge badge-stock" style={{ position: 'absolute', top: '12px', left: '12px' }}>
+                  SFF Business Fleet
+                </span>
+              </div>
+              <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--text-white)', marginBottom: '0.5rem' }}>
+                  Small Form Factor Desktops
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                  Compact desktop chassis providing robust multi-core performance, expansion slots, and quiet thermal management for dense offices.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4: Computer Parts Breakdown */}
+            <div className="card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ height: '220px', overflow: 'hidden', background: '#FFFFFF', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img 
+                  src="/images/computer-parts-breakdown.png" 
+                  alt="Technical breakdown of computer components and hardware parts" 
+                  style={{ maxHeight: '95%', maxWidth: '95%', objectFit: 'contain' }} 
+                />
+                <span className="badge badge-stock" style={{ position: 'absolute', top: '12px', left: '12px' }}>
+                  SIC 46510 Parts
+                </span>
+              </div>
+              <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--text-white)', marginBottom: '0.5rem' }}>
+                  Internal Components &amp; Spares
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
+                  CPUs, high-efficiency power supplies, motherboards, RAM modules, and thermal cooling units for enterprise maintenance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* UK Business Presence */}
       <section className="section">
         <div className="container">
