@@ -3,52 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon & Touch Icons for Google Search Results & Devices -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0B1120" />
+    <meta name="application-name" content="Yasodh Ltd" />
+    <meta name="apple-mobile-web-app-title" content="Yasodh Ltd" />
     
     <!-- Primary Meta Tags -->
-    <title>Yasodh Ltd | UK Wholesale Computers, Peripherals & Software</title>
-    <meta name="title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals & Software" />
+    <title>Yasodh Ltd | UK Wholesale Computers, Peripherals &amp; Software</title>
+    <meta name="title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals &amp; Software" />
     <meta name="description" content="Yasodh Ltd (Company No: 17485685) is an established UK B2B technology wholesaler based in Swindon. Supplying enterprise computers, laptops, peripherals, networking equipment, and software solutions." />
-    <meta name="keywords" content="Yasodh Ltd, computer wholesale UK, computer peripherals wholesale UK, computer supplier Swindon, IT equipment supplier UK, computer hardware supplier UK, business computers UK, software supplier UK, B2B technology supplier UK" />
+    <meta name="keywords" content="Yasodh Ltd, Yasodh, computer wholesale UK, computer peripherals wholesale UK, computer supplier Swindon, IT equipment supplier UK, computer hardware supplier UK, business computers UK, software supplier UK, B2B technology supplier UK, SIC 46510" />
     <meta name="author" content="Yasodh Ltd" />
     <link rel="canonical" href="https://www.yasodh.co.uk/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yasodh Ltd" />
     <meta property="og:url" content="https://www.yasodh.co.uk/" />
-    <meta property="og:title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals & Software" />
+    <meta property="og:title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals &amp; Software" />
     <meta property="og:description" content="UK B2B technology wholesaler supplying enterprise computers, laptops, peripherals, networking, and software solutions to businesses and institutions." />
-    <meta property="og:image" content="https://www.yasodh.co.uk/images/hero-tech.jpg" />
+    <meta property="og:image" content="https://www.yasodh.co.uk/logo512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Yasodh Ltd Official Logo" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.yasodh.co.uk/" />
-    <meta name="twitter:title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals & Software" />
+    <meta name="twitter:title" content="Yasodh Ltd | UK Wholesale Computers, Peripherals &amp; Software" />
     <meta name="twitter:description" content="UK B2B technology wholesaler supplying enterprise computers, laptops, peripherals, networking, and software solutions." />
-    <meta name="twitter:image" content="https://www.yasodh.co.uk/images/hero-tech.jpg" />
+    <meta name="twitter:image" content="https://www.yasodh.co.uk/logo512.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) for Google Search, Knowledge Graph & Organization Logo -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WholesaleStore",
+          "@type": "Organization",
           "@id": "https://www.yasodh.co.uk/#organization",
           "name": "Yasodh Ltd",
           "legalName": "Yasodh Ltd",
+          "alternateName": ["Yasodh", "Yasodh Limited", "Yasodh UK"],
           "url": "https://www.yasodh.co.uk",
-          "logo": "https://www.yasodh.co.uk/favicon.svg",
-          "image": "https://www.yasodh.co.uk/images/hero-tech.jpg",
-          "description": "UK wholesale supplier of computers, computer peripheral equipment, and software (SIC 46510).",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yasodh.co.uk/logo512.png",
+            "contentUrl": "https://www.yasodh.co.uk/logo512.png",
+            "caption": "Yasodh Ltd Official Logo",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://www.yasodh.co.uk/logo512.png",
+          "description": "UK wholesale supplier of computers, computer peripheral equipment and software under UK SIC 46510.",
           "identifier": "17485685",
+          "taxID": "17485685",
           "telephone": "+44 7407 642396",
           "email": "yasodhltd2026@gmail.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Yasodharan Chinnasamy",
+            "jobTitle": "Director"
+          },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "1 Bessemer Rd West",
@@ -65,17 +92,33 @@
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:30",
-              "closes": "17:30"
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday", "Sunday"],
+              "opens": "10:00",
+              "closes": "16:00"
             }
           ],
-          "priceRange": "$$"
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+44 7407 642396",
+              "contactType": "sales",
+              "areaServed": "GB",
+              "availableLanguage": "English"
+            }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://www.yasodh.co.uk/#website",
           "url": "https://www.yasodh.co.uk",
           "name": "Yasodh Ltd",
+          "alternateName": ["Yasodh", "Yasodh Limited"],
+          "description": "UK Wholesale Computers, Computer Peripheral Equipment and Software",
           "publisher": {
             "@id": "https://www.yasodh.co.uk/#organization"
           }
